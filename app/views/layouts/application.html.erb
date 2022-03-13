@@ -13,13 +13,16 @@
     <div>
       <%= flash[:notice] %>
     </div>
-    <div>
-      <a href="/">Home</a>
-      <%= button_to "Logout", "/sessions/logout", method: :delete %>
-      <a href="/sessions/new">Login</a>
-      <a href="/users/new">Signup</a>
-    </div>
 
+      <p>
+      <% if @current_user %>
+            <%= button_to "Logout", "/sessions/logout", method: :delete %>
+      <% else %>
+        <a href="/sessions/new">Login</a> | <a href="/users/new">Signup</a>
+      <% end %>
+    </p>
+
+  
     <%= yield %>
   </body>
 </html>
