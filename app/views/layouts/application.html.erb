@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/application.css">
   </head>
 
+
   <body>
     <div>
       <%= flash[:notice] %>
@@ -16,7 +17,9 @@
 
       <p>
       <% if @current_user %>
-            <%= button_to "Logout", "/sessions/logout", method: :delete %>
+      <h3>Welcome to Tacostagram, <%= @current_user.username %>.</h3>
+          
+          <%= button_to "Logout", "/sessions/logout", method: :delete %>
       <% else %>
         <a href="/sessions/new">Login</a> | <a href="/users/new">Signup</a>
       <% end %>

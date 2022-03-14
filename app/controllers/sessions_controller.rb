@@ -10,11 +10,11 @@ class SessionsController < ApplicationController
         flash[:notice] = "You signed in!"
         redirect_to "/places"
       else
-        flash[:notice] = "Nope"
+        flash[:notice] = "Incorrect email and password combo. Sorry."
         redirect_to "/sessions/new"
       end
     else
-      flash[:notice] = "Nope"
+      flash[:notice] = "Incorrect email and password combo. Sorry."
       redirect_to "/sessions/new"
     end
   end
