@@ -8,11 +8,16 @@
     <p><%= post.description %></p>
   <% end %>
 
-  <p>
-    <a href="/posts/new?place_id=<%= @place.id %>">New Post</a>
-  </p>
+     <div class="row">
+      <div class="col-sm-0">
+        <a href="/places/new/" class="btn btn-success">New Post</a>
+      </div>
+    </div>
 
-  <p>
-    <a href="/places">Back to All Places</a>
-  </p>
+
+      <div class="row">
+      <div class="col-sm-0">
+        <a href="/places" class="btn btn-success">Back to All Places</a>
+      </div>
+    </div>
 <% end %>
