@@ -1,11 +1,11 @@
 <h1><%= @place.name %></h1>
 
 <div class="container">
-<div class="row">
-<div class="col-md-3 col-sm-6">
 <% if @current_user %>
   <h2>My Posts</h2>
+  <div class="row">
   <% for post in @place.posts.where({ user_id: @current_user.id }) %>
+    <div class="col-md-4 col-sm-12">
     <h3><%= post.title %></h3>
     <h4><%= post.posted_on %></h4>
     <p><%= post.description %></p>
@@ -15,8 +15,9 @@
       <% else %>
         <img src="<%= post.image %>" class="img-fluid">
       <% end %>
-
+</div>
   <% end %>
+  </div>
 
      <div class="row">
       <div class="col-sm-0">
@@ -33,5 +34,3 @@
 <% end %>
 
  </div>
-    </div>
-    </div>
