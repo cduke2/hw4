@@ -6,11 +6,12 @@
     <h3><%= post.title %></h3>
     <h4><%= post.posted_on %></h4>
     <p><%= post.description %></p>
+    
   <% end %>
 
      <div class="row">
       <div class="col-sm-0">
-        <a href="/posts/new/" class="btn btn-success">New Post</a>
+        <a href="/posts/new?place_id=<%= @place.id %>" class="btn btn-success" >New Post</a>
       </div>
     </div>
 
