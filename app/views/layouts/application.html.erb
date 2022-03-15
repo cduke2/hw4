@@ -28,7 +28,7 @@
         
         <ul class="navbar-nav mb-2 mb-lg-0">
           <% if @current_user %>
-            <li class="nav-item">Logged in as: <%= @current_user.username %></li>
+            <li class="nav-item">Logged in as: <%= @current_user.username%></li>
             <li class="nav-item"><%= button_to "Logout", "/sessions/logout", method: :delete, class: "nav-link" %></li>
           <% else %>
             <li class="nav-item"><a href="/sessions/new" class="nav-link">Login</a></li>
@@ -46,17 +46,12 @@
         <%= flash[:notice] %>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-sm-9">
-        <h1>Tacostagram</h1>
-      </div>
-      <div class="col-sm-3 text-end">
-        <a href="/posts/new/" class="btn btn-success">New Post</a>
+ 
+     <div class="row">
+      <div class="col-sm-0">
+        <a href="/places/new/" class="btn btn-success">New Place</a>
       </div>
     </div>
-
-    
 
 
 
